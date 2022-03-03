@@ -203,7 +203,7 @@ ax.set_ylabel("number Users")
 
 
     
-![png](notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_6_1.png)
+![png](/blog/notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_6_1.png)
     
 
 
@@ -304,7 +304,7 @@ ax.set_ylabel("sample means")
 
 
     
-![png](notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_13_0.png)
+![png](/blog/notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_13_0.png)
     
 
 
@@ -320,7 +320,7 @@ ax.set_ylabel("sample means")
 
 
     
-![png](notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_13_3.png)
+![png](/blog/notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_13_3.png)
     
 
 
@@ -344,7 +344,7 @@ plt.show()
 
 
     
-![png](notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_15_0.png)
+![png](/blog/notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_15_0.png)
     
 
 
@@ -432,7 +432,7 @@ prob = (boot_7d['diff'] > 0).sum() / len(boot_7d['diff'])
 
 
     
-![png](notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_21_0.png)
+![png](/blog/notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_21_0.png)
     
 
 
@@ -448,7 +448,7 @@ prob = (boot_7d['diff'] > 0).sum() / len(boot_7d['diff'])
 
 
     
-![png](notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_21_3.png)
+![png](/blog/notebook%20AB%20Testing%20with%20Cookie%20Cats_files/notebook%20AB%20Testing%20with%20Cookie%20Cats_21_3.png)
     
 
 

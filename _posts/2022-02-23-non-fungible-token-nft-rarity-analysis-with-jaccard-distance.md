@@ -7,6 +7,9 @@ comments: true
 description: NFT trait set distance calculation with Jaccard Similarity/Distance for rarity measurement of indivual tokens in collections
 ---
 
+
+## trait set distance calculation with Jaccard Similarity/Distance
+
 ### Overview market macro stats for a market & collection of my choice
 
 
@@ -29,19 +32,18 @@ print(f"24h AVG price:", r.json()["stats"]["one_day_average_price"],f"ETH")
 print(f"Unique owners:", r.json()["stats"]["num_owners"],f"/", r.json()["stats"]["count"] )
 ```
 
-    floor price: 0.05 ETH
-    24h Volume: 1.497 ETH
-    24h sales: 21.0
-    Number of sales in last 30 days 1287.0
-    24h AVG price: 0.07128571428571429 ETH
-    Unique owners: 1973 / 4264.0
+    floor price: 0.04 ETH
+    24h Volume: 0.6194999999999999 ETH
+    24h sales: 15.0
+    Number of sales in last 30 days 1426.0
+    24h AVG price: 0.041299999999999996 ETH
+    Unique owners: 2168 / 4645.0
     
 
 
 ```python
 import pandas as pd
-asset_traits = pd.read_pickle('asset_traits.pkl') # load prepared df with trait variants of tokens 0 to 4000 
-# (292 tokens missing due to lacking opensea metadata on 23-Feb-22)
+asset_traits = pd.read_pickle('asset_traits.pkl') # load prepared df with trait variants of tokens 0 to 4094
 ```
 
 
@@ -159,19 +161,180 @@ We use the Jaccard Distance to measures dissimilarity between its traits and eve
 
 I have optimized these numerous iterations of rows with ```df.itertuples()``` already, but still thinking on how to implement the same completely vectorized, if that is possible.
 
+### Update 1 - 03-Mar-22: 
+
+- Label encoding trait variants
+- Implementing Multiprocessing Pool (spawn processes for DataFrame chunks)
+
+
+
+```python
+# Update 1 - 03-Mar-22
+# map trait variants to short number codes before number crunching to save 40%+ processing time
+
+dftest = asset_traits.copy()
+
+# all unique trait variants
+u =set()
+for col in dftest.iloc[:,1:].columns:
+    dftest[col] = dftest[col].fillna(0)
+    v = set(dftest[col].unique())
+    u = u.union(v)
+
+# map unique code across all cols to all trait variants
+mapping = {item:i for i, item in enumerate(u)}
+
+for col in dftest.iloc[:,1:].columns:
+    dftest[col] = dftest[col].apply(lambda x: mapping[x])
+    
+dftest.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>token_id</th>
+      <th>MOUTH</th>
+      <th>HAT</th>
+      <th>EYES</th>
+      <th>CLOTH</th>
+      <th>BACKGROUND</th>
+      <th>SKIN</th>
+      <th>WATCH</th>
+      <th>LEGENDARY APE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>75</td>
+      <td>120</td>
+      <td>96</td>
+      <td>34</td>
+      <td>22</td>
+      <td>118</td>
+      <td>62</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>91</td>
+      <td>63</td>
+      <td>19</td>
+      <td>109</td>
+      <td>22</td>
+      <td>78</td>
+      <td>101</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>75</td>
+      <td>84</td>
+      <td>64</td>
+      <td>3</td>
+      <td>114</td>
+      <td>78</td>
+      <td>90</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>89</td>
+      <td>42</td>
+      <td>33</td>
+      <td>102</td>
+      <td>114</td>
+      <td>106</td>
+      <td>13</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>89</td>
+      <td>44</td>
+      <td>80</td>
+      <td>11</td>
+      <td>73</td>
+      <td>2</td>
+      <td>88</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 
 ```python
 %%time
+# Update 1 - 03-Mar-22
+# multiprocessing pool for the cpu intensive jaccard distances calculations
+
+import multiprocessing
+#from multiprocessing import Pool
+from itertools import repeat
+import pandas as pd
+import jaccard # moved jaccard distance calculations code as jaccard function to jaccard.py in order to make multiproc work
+
+collection_slug = 'officialtimelessapeclub'
+
+# Divide asset dataframe into n chunks
+n = 6 # define the number of processes (cpu cores)
+chunk_size = int(asset_traits.shape[0]/n)+1
+chunks = [asset_traits.index[i:i + chunk_size] for i in range(0, asset_traits.shape[0], chunk_size)]
+
+# multiprocess pool - sending chunk indices and collection info as args, df opened directly by jaccard.py
+with multiprocessing.Pool() as pool:
+    result = pool.starmap(jaccard.jaccard, zip(chunks, repeat(collection_slug)))
+    
+# Concatenate all chunks back to one
+jdist = pd.concat(result)
+```
+
+    Wall time: 2min 11s
+    
+
+Saving approx. 75% time compared to the single thread code.
+
+
+```python
+%%time
+# original single thread solution
 
 import numpy as np
 from scipy.spatial.distance import jaccard
-from sklearn import preprocessing
-from sklearn.preprocessing import MinMaxScaler
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+# https://stackoverflow.com/questions/40659212/futurewarning-elementwise-comparison-failed-returning-scalar-but-in-the-futur
 
 df2 = asset_traits.copy()
 
 jdist = pd.DataFrame(columns=['token_id','jd_mean'])
-score = pd.DataFrame(columns=['token_id','score'])
     
 # calc jaccard dist for each row
 for row1 in df2.itertuples():
@@ -184,20 +347,20 @@ for row1 in df2.itertuples():
     jdist.loc[row1.token_id] = [row1.token_id, np.mean(jdlist)] # save the mean of jd of row1
 ```
 
-    C:\Users\SD\anaconda3\envs\abtest\lib\site-packages\scipy\spatial\distance.py:867: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
-      nonzero = np.bitwise_or(u != 0, v != 0)
-    
-
-    Wall time: 6min 21s
+    Wall time: 9min 40s
     
 
 
 ```python
 # normalize jaccard distances for a score 0 to 1
+from sklearn import preprocessing
+from sklearn.preprocessing import MinMaxScaler
+
 scaler = MinMaxScaler()
 arr = jdist['jd_mean'].to_numpy()
 normalized = scaler.fit_transform(arr.reshape(-1, 1))
 # write to df
+score = pd.DataFrame(columns=['token_id','score'])
 score['token_id'] = jdist['token_id']
 score['score'] = normalized
 ```
@@ -226,13 +389,13 @@ plt.show()
 
 
     
-![png](/blog/nft2-blog_files/nft2-blog_9_0.png)
+![png](/blog/nft2-blog-update1-multiprocessing_files/nft2-blog-update1-multiprocessing_13_0.png)
     
 
 
 
     
-![png](/blog/nft2-blog_files/nft2-blog_9_1.png)
+![png](/blog/nft2-blog-update1-multiprocessing_files/nft2-blog-update1-multiprocessing_13_1.png)
     
 
 
@@ -276,32 +439,32 @@ score.head()
     <tr>
       <th>0</th>
       <td>0</td>
-      <td>0.083667</td>
-      <td>6.450647</td>
+      <td>0.085865</td>
+      <td>6.452084</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
-      <td>0.039429</td>
-      <td>6.376214</td>
+      <td>0.040798</td>
+      <td>6.376137</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2</td>
-      <td>0.101939</td>
-      <td>6.481392</td>
+      <td>0.104821</td>
+      <td>6.484028</td>
     </tr>
     <tr>
       <th>3</th>
       <td>3</td>
-      <td>0.058182</td>
-      <td>6.407767</td>
+      <td>0.068918</td>
+      <td>6.423524</td>
     </tr>
     <tr>
       <th>4</th>
       <td>4</td>
-      <td>0.120372</td>
-      <td>6.512406</td>
+      <td>0.117876</td>
+      <td>6.506029</td>
     </tr>
   </tbody>
 </table>
