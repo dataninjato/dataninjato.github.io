@@ -1,6 +1,6 @@
 ---
 title: Non Fungible Token (NFT) Rarity Analysis with Jaccard Distance
-tags: [Python, sample set dissimilarity, Jaccard Distance, Jaccard Similarity, Scraping, NFT, Blockchain]
+tags: [Python, sample set dissimilarity, Jaccard Distance, Jaccard Similarity, Scraping, NFT, Blockchain, Multiprocessing]
 style: fill
 color: primary
 comments: true
