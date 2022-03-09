@@ -962,8 +962,6 @@ for _ in range(10000):
     p_diffs.append(diff)
 ```
 
-i. Plot a histogram of the **p_diffs**.  Does this plot look like what you expected?  Use the matching problem in the classroom to assure you fully understand what was computed here.
-
 
 ```python
 import seaborn as sns
@@ -990,4 +988,4 @@ plt.hist(p_diffs)
     
 
 
-discontinued for now due to minor AWS cloud cost shock at the billing cycle 🙈
+Status: stopped this small project for now due to a minor AWS cloud cost shock at the billing cycle 🙈
