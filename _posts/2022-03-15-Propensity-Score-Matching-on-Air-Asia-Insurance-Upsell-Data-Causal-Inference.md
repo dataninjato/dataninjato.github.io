@@ -2,7 +2,7 @@
 title: Propensity Score Matching on AirAsia Insurance Upsell Data (Causal Inference)
 tags: [Causal Inference, Propensity Score Matching, Propensity Modelling, Python, Kaggle]
 style: fill
-color: warning
+color: success
 description: Propensity Score Matching as a method to descriptive data science modelling exemplified with AirAsia bookings dataset from Kaggle.
 ---
 
