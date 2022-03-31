@@ -2,8 +2,7 @@
 title: OpenSea API and Scrape Explorer Streamlit Automated Dashboard App
 tags: [Streamlit, Python, Dashboard, API, Scraping, Analysis Tool, Heroku]
 style: fill
-color: yellow
-border: yellow
+color: warning
 description: Self Servicing Demo of an app that provides real added value and high reusability for more than one user only. A Data Analyst can support and reach a wide audience of users, who would like to self service and maybe ad-hoc require a piece of information right away.
 ---
 

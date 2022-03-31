@@ -1,7 +1,7 @@
 ---
 title: Bayes Theorem applied in Python incl. A/B Testing example - Notes
 tags: [Statistics, Python, A/B testing, Inference, Notes]
-style: fill
+style: border
 color: warning
 description: Notes on the datacamp course 'Bayesian Data Analysis in Python' exercising through e.g. A/B testing the Bayesian way using credible intervals instead those of confidence.
 ---
