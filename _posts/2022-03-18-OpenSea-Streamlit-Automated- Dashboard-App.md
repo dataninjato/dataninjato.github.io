@@ -19,6 +19,7 @@ and modified and extended by
 2. Collection Market Stats (Data pulled from Opensea API)
 3. Collection Market in Detail by looking at individual orders and their price value positions (Data scraped live from Opensea collection urls)
 
+[Update 11 Apr 2022: Stats comparison data saved locally to SQLITE db]
 
 Check out the app here: Hosted 24/7 on Heroku: [https://opensea-nft-api-scraper-stream.herokuapp.com/](https://opensea-nft-api-scraper-stream.herokuapp.com/)
 
@@ -34,7 +35,6 @@ Check out the app here: Hosted 24/7 on Heroku: [https://opensea-nft-api-scraper-
 
 if endpoint == 'Rarity Ranks':
     import seaborn as sns
-    import cv2
     import matplotlib.pyplot as plt
     import numpy as np
     from scipy.stats import percentileofscore
@@ -134,7 +134,7 @@ Calls are paced in order to avoid getting throttled by the OpenSea API.
 
 Further things that could be done: 
 
-- automated querying of these stats and saving it to a cloud database to have meaningful deltas displayed in the metrics
+- automated querying of these stats and saving it to a cloud database to have meaningful deltas displayed in the metrics [Update 11 Apr 2022: Comparison data saved locally to SQLITE db]
 - analysis and charting of this data history
 
 # 3. Collection Market in Detail by looking at individual orders and their price value positions (Data scraped live from Opensea collection urls)
