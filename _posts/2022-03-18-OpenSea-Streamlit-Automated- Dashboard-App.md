@@ -20,6 +20,8 @@ and modified and extended by
 3. Collection Market in Detail by looking at individual orders and their price value positions (Data scraped live from Opensea collection urls)
 
 [Update 11 Apr 2022: Stats comparison data saved locally to SQLITE db]
+</br>
+[Update 28 Apr 2022: SQLITE db being too slow, now implemented with MySQL database backend - now more data can be acquired over time for later use]
 
 Check out the app here: Hosted 24/7 on Heroku: [https://opensea-nft-api-scraper-stream.herokuapp.com/](https://opensea-nft-api-scraper-stream.herokuapp.com/)
 
@@ -134,7 +136,7 @@ Calls are paced in order to avoid getting throttled by the OpenSea API.
 
 Further things that could be done: 
 
-- automated querying of these stats and saving it to a cloud database to have meaningful deltas displayed in the metrics [Update 11 Apr 2022: Comparison data saved locally to SQLITE db]
+- automated querying of these stats and saving it to a cloud database to have meaningful deltas displayed in the metrics [Update 11 Apr 2022: Comparison data saved locally to SQLITE db] [Update 28 Apr 2022: SQLITE db being too slow, now implemented with MySQL database backend - now more data can be acquired over time for later use]
 - analysis and charting of this data history
 
 # 3. Collection Market in Detail by looking at individual orders and their price value positions (Data scraped live from Opensea collection urls)
