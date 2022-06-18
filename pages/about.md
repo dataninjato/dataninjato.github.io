@@ -15,11 +15,12 @@ I would like to show case a few of projects that I have done around data and occ
 - Data Analysis/Science
 - Visualization (Matplotlib, Seaborn)
 - Statistics
-- BI Software (Excel/Quicksense/PowerBI)
+- BI Software (Tableau/PowerBI)
 - Business Accumen
 - E-commerce
 - Cloud Tech (Azure/AWS)
 - JASP
+- dbt fundamentals
 
 ## Programming Skills
 - Python
