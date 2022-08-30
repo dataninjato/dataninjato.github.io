@@ -23,10 +23,21 @@ I would like to show case a few of projects that I have done around data and occ
 - dbt fundamentals
 
 ## Programming Skills
-- Python
+- Python (pandas, numpy, scipy, statsmodels, scikit learn, etc.)
 - SQL
 - PHP
 - VBA
 - R
 - Octave
 - SAS
+
+<a href='https://www.datacamp.com/certificate/DA0015624503787' >
+	<img src="/blog/data_analyst_professional_badge.svg" 
+	alt='Professional Data Analyst | DataCamp | 2022'
+	/>
+</a>
+<a href='https://www.datacamp.com/certificate/DS0011414141814' >
+	<img src="/blog/data_scientist_professional_badge.svg" 
+	alt='Professional Data Scientist | DataCamp | 2022'
+	/>
+</a>
