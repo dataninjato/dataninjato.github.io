@@ -2,7 +2,7 @@
 name: Trends on Data Science Question Topics 2021
 tools: [SQL, Association Rules, Apriori, Data Wrangling]
 image: /blog/datascience.stackexchange.png
-description: Explore Data Science Question Data of the Data Science Stack Exchange (DSSE) and analyze trends and topics such as Deep-Learning over time with pandas and Association Rules with libary mlxtend
+description: Explore Data Science Question Data of the Data Science Stack Exchange (DSSE) and analyze trends and topics such as Deep-Learning over time with pandas and Association Rules with library mlxtend.
 
 ---
 
