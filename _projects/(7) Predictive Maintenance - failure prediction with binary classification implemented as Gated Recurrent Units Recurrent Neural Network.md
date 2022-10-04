@@ -924,13 +924,13 @@ print('Accurracy: {}'.format(scores[1]))
 
 
     
-![png](Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_files/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_23_0.png)
+![png](/blog/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_files/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_23_0.png)
     
 
 
 
     
-![png](Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_files/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_23_1.png)
+![png](/blog/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_files/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_23_1.png)
     
 
 
@@ -966,7 +966,7 @@ print( 'precision = ', precision, '\n', 'recall = ', recall)
 
 
     
-![png](Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_files/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_24_0.png)
+![png](/blog/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_files/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_24_0.png)
     
 
 
@@ -1031,7 +1031,7 @@ print( 'Precision: ', precision_test, '\n', 'Recall: ', recall_test,'\n', 'F1-sc
 
 
     
-![png](Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_files/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_26_1.png)
+![png](/blog/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_files/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_26_1.png)
     
 
 
@@ -1063,7 +1063,7 @@ plt.show()
 
 
     
-![png](Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_files/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_27_0.png)
+![png](/blog/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_files/Predictive-Maintenance-failure-prediction-binary-classification-Gated-Recurrent-Units_27_0.png)
     
 
 
