@@ -1589,6 +1589,8 @@ recall    = 1.00
 </div>
 
 
+![png](/blog/belgian-train-times_files/Snapshot_2022-10-12_213306_adb-8327043797808427.7.azuredatabricks.net.png)
+
 As indicated right from the start is the data set as given unsuited to be analyzed by a machine learning model, as the limited scope of features (with a large proportion of categorical ones) is unable to adequately explain the delay variance at all. That just means that more data from other sources should be considered to be added, which can further augment the given and already feature-engineered data columns as shown above. Any railway company can easily provide further train and station-related data from their operational systems such as railway section utilization data in a large quantity, so that you can easily incorporate train number specific data to even have train number (group) specific models created that are more homogeneous among themselves and allow better estimates/outputs. In praxis, such a barebone data set will have to be complemented with further data from various sources, for instance, data of business systems, IoT sensor data in trains and stations, and external data sources like e.g. local/regional weather data, provided the goal of the analysis is the finding of correlating features with train delays and possible insights about root causes with proven causal relationships.
 
 Therefore, I focused on rather explorative data analysis especially the timing and delay features and of course how the train stations relate to delays. 
