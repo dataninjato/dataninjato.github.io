@@ -5,7 +5,7 @@ style: fill
 color: primary
 image: 'https://github.com/dataninjato/Was-a-website-redesign-successful/raw/main/conversion-rate-per-group.png'
 comments: true
-description: I have got hands on Belgium Train Delay data set which is due to be analyzed with PySpark on an Azure Databricks Cluster notebook session. The goal of the analysis is finding of correlating features with train delays. For that to happen this barebone data set will have to be complemented with further data in the future; e.g. data from business systems, IoT sensor data in trains and stations, and external data sources like e.g. local/regional weather data.
+description: I have got hands on Belgium Train Delay data set which is due to be analyzed with PySpark on an Azure Databricks Cluster notebook session. The goal of the analysis is finding of correlating features with train delays. For that to happen this barebone data set will have to be complemented with further data in the future; e.g. data from business systems, IoT (Internet of Things) sensor data in trains and stations, and external data sources like e.g. local/regional weather data.
 ---
 
 
@@ -1591,10 +1591,13 @@ recall    = 1.00
 
 ![png](/blog/belgian-train-times_files/Snapshot_2022-10-12_213306_adb-8327043797808427.7.azuredatabricks.net.png)
 
-As indicated right from the start is the data set as given unsuited to be analyzed by a machine learning model, as the limited scope of features (with a large proportion of categorical ones) is unable to adequately explain the delay variance at all. That just means that more data from other sources should be considered to be added, which can further augment the given and already feature-engineered data columns as shown above. Any railway company can easily provide further train and station-related data from their operational systems such as railway section utilization data in a large quantity, so that you can easily incorporate train number specific data to even have train number (group) specific models created that are more homogeneous among themselves and allow better estimates/outputs. In praxis, such a barebone data set will have to be complemented with further data from various sources, for instance, data of business systems, IoT sensor data in trains and stations, and external data sources like e.g. local/regional weather data, provided the goal of the analysis is the finding of correlating features with train delays and possible insights about root causes with proven causal relationships.
+As indicated right from the start the data set as given is unsuited to be analyzed by a machine learning model, as the limited scope of features (with a large proportion of categorical ones) is unable to adequately explain the delay variance at all. An example dataset with which delays can be modeled is the airline delays dataset that I have [just analyzed with Azure a week ago.](https://dataninjato.github.io/blog/Azure-Machine-Learning-Python-SDK). Besides predicting if or how severe delays could occur, the created model can also be used with explainers to get right down to ranked global and local feature importances on the delay label, describing the covariates' magnitude and trying to pin down causal relationships.
 
-Therefore, I focused on rather explorative data analysis especially the timing and delay features and of course how the train stations relate to delays. 
+For such train delay data, other sources should be considered in order to add further columns, which can augment the given and already feature-engineered data columns as shown above. Any railway company should be able to provide further train and station-related data from their operational systems such as railway section utilization data in a large quantity so that you can easily incorporate train number (group) specific data to allow train group clustering features to create. In praxis, such a barebone data set will have to be complemented with further data from various sources, for instance, data of business systems, IoT sensor data in trains and stations, and external data sources like e.g. local/regional weather data, provided the goal of the analysis is the finding of correlating features with train delays and possible insights about root causes with proven causal relationships.
 
-There were some interesting findings and I hope you enjoyed following as much as I did. 
+Given these limitations, I have focused here rather on explorative data analysis especially the timing and delay features and of course how the train stations relate to delays. 
+
+There were some nice findings in there, just imagine what could be done with more data at hand! I hope you enjoyed following as much as I did.
+
 
 Have a nice day!
