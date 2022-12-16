@@ -46,3 +46,6 @@ I would like to show case a few of projects that I have done around data and occ
 	alt='Azure Data Scientist Associate | Microsoft | 2022' width=186 height=215
 	/>
 </a>
+<a href='https://www.datacamp.com/statement-of-accomplishment/track/a486849ca01aa2fba3c5d2104c7e961e5469936c' >
+	Big Data with PySpark - Skill Track Completition
+</a>
