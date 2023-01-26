@@ -16,20 +16,27 @@ I would like to show case a few of projects that I have done around data and occ
 - Visualization (Matplotlib, Seaborn)
 - Statistics
 - BI Software (Tableau/PowerBI)
-- Business Accumen
-- E-commerce
+- Databases / Extract, Transform, Load (ETL)
+- Business Administration
+- Lean Six Sigma
+- Service Engineering
 - Cloud Tech (Azure/AWS)
+- E-commerce
+- SAP R/3 / BW / BEX
 - JASP
-- dbt fundamentals
+- airflow
 
 ## Programming Skills
 - Python (pandas, numpy, scipy, statsmodels, scikit learn, etc.)
 - SQL
+- PySpark
 - PHP
 - VBA
 - R
 - Octave
 - SAS
+- dbt fundamentals
+
 
 <a href='https://www.datacamp.com/certificate/DA0015624503787' >
 	<img src="/blog/data_analyst_professional_badge.svg" 
@@ -47,5 +54,5 @@ I would like to show case a few of projects that I have done around data and occ
 	/>
 </a>
 <a href='https://www.datacamp.com/statement-of-accomplishment/track/a486849ca01aa2fba3c5d2104c7e961e5469936c' >
-	Big Data with PySpark - Skill Track Completition
+	Big Data with PySpark - Skill Track Completion
 </a>
