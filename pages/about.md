@@ -15,7 +15,7 @@ I would like to show case a few of projects that I have done around data and occ
 - Data Analysis/Science
 - Visualization (Matplotlib, Seaborn)
 - Statistics
-- BI Software (Tableau/PowerBI)
+- BI Software (Tableau/PowerBI & DAX)
 - Databases / Extract, Transform, Load (ETL)
 - Business Administration
 - Lean Six Sigma
