@@ -1,15 +1,10 @@
 ---
-title: A/B testing of website landing pages with awswrangler, AWS Python SDK and AWS Cloud Services
-tags: [ab-testing, python, awswrangler, aws python SDK, aws glue, aws athena, aws s3]
+title: A/B testing of website landing pages - ETL with awswrangler, AWS Python SDK and AWS Cloud Services
+tags: [ab-testing, python, ETL, awswrangler, aws python SDK, aws glue, aws athena, aws s3]
 style: fill
 color: info
 description: data ingestion with awswrangler, AWS Python SDK and AWS S3, Glue & Athena services
 ---
-
-
-# A/B testing of website landing pages 
-
-## with awswrangler, AWS Python SDK and AWS S3, Glue & Athena services
 
 
 ## System setup & data ingestion with AWS cloud
