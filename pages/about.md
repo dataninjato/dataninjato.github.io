@@ -9,22 +9,29 @@ weight: 3
 
 Hello I am **{{ site.author.name }}** :wave:,<br>
 
-I would like to show case a few of projects that I have done around data and occasionally write a blog or document implementations or notes to certain courses and topics on this site.
+I would like to show case a few of projects that I have done around data & business and occasionally write a blog or document implementations or notes to certain courses and topics on this site.
 
 ## Skills
 - Data Analysis/Science
 - Visualization (Matplotlib, Seaborn)
 - Statistics
-- BI Software (Tableau/PowerBI & DAX)
-- Databases / Extract, Transform, Load (ETL)
+- BI Software (Tableau, PowerBI & DAX)
+- Databases & Data Warehouses
+- SQL Server Integration Service (SSIS) 
+- SQL Server Analysis Services (SSAS)
+- SQL Server Reporting Services (SSRS)
+- Extract, Transform, Load (ETL)
+- Microsoft Office & VBA
 - Business Administration
+- Procurement & Supply Chain
 - Lean Six Sigma
 - Service Engineering
 - Cloud Tech (Azure/AWS)
 - E-commerce
-- SAP R/3 / BW / BEX
-- JASP
-- airflow
+- SAP Hana S/4, R/3, BW, BEX, Netweaver
+- Process Modelling & Management
+- Business Process Model and Notation (BPMN) 2.0 
+
 
 ## Programming Skills
 - Python (pandas, numpy, scipy, statsmodels, scikit learn, etc.)
