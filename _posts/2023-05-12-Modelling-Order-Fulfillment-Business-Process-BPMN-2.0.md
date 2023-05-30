@@ -14,14 +14,14 @@ description: Documenting and demonstrating my process-modelling and -management 
 </style>
 
 
-For some time I wanted to document and demonstrate my process modelling and management knowledge and the skills to document business processes with BPMN 2.0, the Business Process Model and Notation standard which is a ISO standard for nearly 10 years already.
+For my company ZS Trading I had modeled my own Business Process for Order Fulfillment with the `Fulfillment by Amazon (FBA)` service, which I had conceived and specified along the enabling possiblities of Amazon Market Web Service (MWS) a few years ago.
 
-For this purpose I have modeled my very own Business Process, which I had conceived and specified along the enabling possiblities of Amazon Market Web Service (MWS) a few years ago.
+For this purpose I applied my BPMN 2.0 skills in the business process modelling, which is short for the Business Process Model and Notation standard which is an ISO standard for nearly 10 years already.
 
 
 ![Order Fulfillment Process in BPMN 2.0](/blog/modelling-business-process/ZST-Order-Fufillment-Process-bpmn20.png "Order Fulfillment Process in BPMN 2.0"){: width="1346" }
 
-The Process starts with the compliation of customer orders from the ERP system that were earmarked by a meta process to be fulfilled with the service `Fulfillment by Amazon (FBA)` in form of an XML file.
+The Process starts with the compliation of customer orders from the ERP system that were earmarked by a meta process to be fulfilled with the FBA service in form of an XML file.
 
 In a second step those order positions part numbers are collected and queried against existing SKUs in a MySQL database, which in return will be matched with live inventory data that is available for fulfillment right away along with inventory health data (storage durations).
 
