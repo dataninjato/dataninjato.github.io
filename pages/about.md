@@ -44,6 +44,11 @@ I would like to show case a few of projects that I have done around data & busin
 - SAS
 - dbt fundamentals
 
+<a href='https://www.datacamp.com/certificate/DEA0014495652948' >
+	<img src="/blog/data_engineer_associate_badge.svg" 
+	alt='Data Engineer Associate | DataCamp | 2023'
+	/>
+</a>
 
 <a href='https://www.datacamp.com/certificate/DA0015624503787' >
 	<img src="/blog/data_analyst_professional_badge.svg" 
@@ -55,6 +60,8 @@ I would like to show case a few of projects that I have done around data & busin
 	alt='Professional Data Scientist | DataCamp | 2022'
 	/>
 </a>
+
+
 <a href='https://www.credly.com/badges/772f0117-dd7d-442f-95bf-708fa831b0cf' >
 	<img src="/blog/azure-data-scientist-associate.png" 
 	alt='Azure Data Scientist Associate | Microsoft | 2022' width=186 height=215
