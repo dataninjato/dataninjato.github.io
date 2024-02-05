@@ -1,6 +1,6 @@
 ---
 title: Logistics Time-Driven Activity-Based Costing (TDABC) - Applied Python in Costing Logistic Services
-tags: [Activity-Based Costing, Time-Driven Activity-Based Costing, Python]
+tags: [Activity-Based Costing, Time-Driven Activity-Based Costing, Python, Supply Chain, Logistics]
 style: fill
 color: secondary
 description: Implementing Time-Driven Activity-Based Costing (TDABC) with Python and extending with storage costs. Thus significantly enhancing logistics decision-making by providing valuable insights and improving various facets of operational efficiency and profitability management.
